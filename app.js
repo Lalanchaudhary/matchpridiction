@@ -83,6 +83,14 @@ function bindUnlock(){
   });
 }
 
+function bindWhatsappPopupClose(){
+  const popup = document.getElementById('whatsappPopup');
+  const closeBtn = document.querySelector('.whatsapp-popup-close');
+  if(popup && closeBtn){
+    closeBtn.addEventListener('click',()=>popup.classList.add('hidden'));
+  }
+}
+
 function setupPremiumButtons(){
   document.querySelectorAll('[data-subscribe]').forEach(b=>{
     b.addEventListener('click',()=>{
@@ -95,7 +103,7 @@ function setupPremiumButtons(){
 document.addEventListener('DOMContentLoaded',()=>{
   // common UI
   const y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
-  renderTicker();renderFeatured();renderLatest();animateCounters();bindUnlock();setupPremiumButtons();
+  renderTicker();renderFeatured();renderLatest();animateCounters();bindUnlock();bindWhatsappPopupClose();setupPremiumButtons();
   // predictions page filter
   const filter = document.getElementById('sportFilter'); if(filter){
     // populate unique sports
