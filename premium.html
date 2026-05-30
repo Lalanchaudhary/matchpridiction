@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premium - Match Predictor Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Match Predictor Pro</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="predictions.html">Predictions</a>
+        <a href="premium.html" class="active">Premium</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Premium Predictions</h2>
+    <p class="muted">Unlock locked predictions, in-depth analysis, and member-only alerts.</p>
+
+    <div class="subscribe-cards">
+      <div class="plan">
+        <h4>Daily Pass</h4>
+        <div class="small">24-hour access to all premium tips</div>
+        <div style="margin-top:12px"><button class="btn primary" data-subscribe="Daily">Buy Daily</button></div>
+      </div>
+      <div class="plan">
+        <h4>Weekly Pass</h4>
+        <div class="small">7 days of premium predictions</div>
+        <div style="margin-top:12px"><button class="btn primary" data-subscribe="Weekly">Buy Weekly</button></div>
+      </div>
+      <div class="plan">
+        <h4>Monthly Pass</h4>
+        <div class="small">30 days of premium access + VIP group</div>
+        <div style="margin-top:12px"><button class="btn primary" data-subscribe="Monthly">Buy Monthly</button></div>
+      </div>
+    </div>
+
+    <section style="margin-top:20px">
+      <h3>Payment Integration</h3>
+      <p class="muted">We support Stripe, PayPal, and other gateways. Below is a placeholder for integration.</p>
+      <div class="card" style="margin-top:12px">
+        <form id="paymentForm">
+          <label class="small">Name</label>
+          <input type="text" name="name" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff" required>
+          <label class="small">Card (mock)</label>
+          <input type="text" name="card" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff" placeholder="4242 4242 4242 4242">
+          <div style="display:flex;gap:8px;margin-top:8px"><button type="button" class="btn primary" id="mockPay">Pay (Mock)</button><button type="button" class="btn outline" id="cancelPay">Cancel</button></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Match Predictor Pro</div>
+      <div class="socials">Questions? <a href="#">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.getElementById('mockPay').addEventListener('click',()=>{
+        localStorage.setItem('isPremium','1');alert('Payment simulated — Premium unlocked!');window.location.href='predictions.html';
+      });
+      document.getElementById('cancelPay').addEventListener('click',()=>{alert('Payment cancelled');});
+    });
+  </script>
+</body>
+</html>

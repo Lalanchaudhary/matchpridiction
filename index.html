@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Predictor Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">Match Predictor Pro</h1>
+            <nav class="nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="predictions.html">Predictions</a>
+                <a href="premium.html">Premium</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h2>Accurate Match Predictions & Expert Analysis</h2>
+                    <p>Data-driven forecasts, veteran analysts, and real-time insights for all major sports.</p>
+                    <div class="cta">
+                        <a class="btn primary" href="predictions.html">View Predictions</a>
+                        <a class="btn outline" href="premium.html">Join VIP Tips</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-target="87">0</div>
+                            <div class="stat-label">Win Rate (%)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Members (k)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Matches Analyzed (k)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Simple SVG sports collage -->
+                    <svg viewBox="0 0 500 300" class="sports-graphic" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#4facfe"/><stop offset="1" stop-color="#00f2fe"/></linearGradient>
+                        </defs>
+                        <rect x="0" y="0" width="500" height="300" rx="16" fill="url(#g)" opacity="0.12"></rect>
+                        <g transform="translate(30,40)">
+                            <circle cx="70" cy="60" r="30" fill="#fff" stroke="#000" stroke-opacity="0.06"/>
+                            <rect x="150" y="30" width="80" height="50" rx="8" fill="#fff" stroke="#000" stroke-opacity="0.06"/>
+                            <path d="M320 30 q30 30 0 60" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.9"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="ticker">
+            <div class="container">
+                <div class="ticker-inner" id="liveTicker">Loading live matches...</div>
+            </div>
+        </section>
+
+        <section class="featured container">
+            <h3>Featured Predictions</h3>
+            <div class="cards" id="featuredPredictions"></div>
+        </section>
+
+        <section class="predictions container">
+            <h3>Latest Predictions</h3>
+            <div id="latestList" class="cards"></div>
+        </section>
+
+        <section class="testimonials container">
+            <h3>User Testimonials</h3>
+            <div class="testi-grid">
+                <blockquote>
+                    “I doubled my win rate — the analyses are excellent.”
+                    <cite>- Arjun, Pro Bettor</cite>
+                </blockquote>
+                <blockquote>
+                    “Reliable tips and great support. VIP is worth it.”
+                    <cite>- Maria, Fantasy Manager</cite>
+                </blockquote>
+                <blockquote>
+                    “Clean UI and accurate predictions week after week.”
+                    <cite>- Daniel, Sports Analyst</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© <span id="year"></span> Match Predictor Pro</div>
+            <div class="socials">Follow us: <a href="#">Twitter</a> • <a href="#">Instagram</a></div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
